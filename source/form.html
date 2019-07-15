@@ -29,53 +29,57 @@
         </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="inner-page-form">
       <section class="main-form">
         <h1 class="main-form__title">Подбор программы</h1>
         <p class="main-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="main-form__write form" action="https://echo.htmlacademy.ru." method="post">
           <fieldset class="form__items">
             <legend class="visually-hidden">Информация о животном</legend>
-            <p class="form__item">
-              <label class="form__label label-name" for="cat-name">Имя:*</label>
-              <input class="form__input input-name" id="cat-name" type="text" name="name" placeholder="Барсик" required>
-            </p>
-            <p class="form__item">
-              <label class="form__label label-weight" for="cat-weight">Вес (кг):*</label>
-              <input class="form__input input-weight" id="cat-weight" type="number" name="weight" placeholder="7" required>
-            </p>
-            <p class="form__item">
-              <label class="form__label label-age" for="cat-age">Возраст (лет):</label>
-              <input class="form__input input-age" id="cat-age" type="number" name="age" placeholder="7">
-            </p>
+            <ul class="form__list info-list">
+              <li class="info-list__item">
+                <label class="info-list__label label-name label" for="cat-name">Имя:*</label>
+                <input class="info-list__input input-name input" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+              </li>
+              <li class="info-list__item">
+                <label class="info-list__label label-weight label" for="cat-weight">Вес (кг):*</label>
+                <input class="info-list__input input-weight input" id="cat-weight" type="number" name="weight" placeholder="7" required>
+              </li>
+              <li class="info-list__item">
+                <label class="info-list__label label-age label" for="cat-age">Возраст (лет):</label>
+                <input class="info-list__input input-age input" id="cat-age" type="number" name="age" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__items">
             <legend class="visually-hidden">Выбор программы</legend>
             <ul class="form__list program-list">
               <li class="program-list__item">
-                <input class="program-list__input input__radio" id="weight-loss" type="radio" name="program-option" checked>
-                <label class="program-list__label label__radio" for="weight-loss">Похудение</label>
+                <input class="program-list__input program-list__input--radio" id="weight-loss" type="radio" name="program-option" checked>
+                <label class="program-list__label label" for="weight-loss">Похудение</label>
               </li>
               <li class="program-list__item">
-                <input class="program-list__input input__radio" id="put-on-weight" type="radio" name="program-option">
-                <label class="program-list__label label__radio" for="put-on-weight">Набор массы</label>
+                <input class="program-list__input program-list__input--radio" id="put-on-weight" type="radio" name="program-option">
+                <label class="program-list__label label" for="put-on-weight">Набор массы</label>
               </li>
               <li class="program-list__item">
-                <input class="program-list__input input__radio" id="advice" type="radio" name="program-option">
-                <label class="program-list__label label__radio" for="advice">Не знаю (Нужен ваш совет)</label>
+                <input class="program-list__input program-list__input--radio" id="advice" type="radio" name="program-option">
+                <label class="program-list__label label" for="advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__contacts">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
-            <p class="form__item your-info">
-              <label class="your-info__label" for="e-mail">E-mail:*</label>
-              <input class="your-info__input input--email" id ="e-mail" type="text" name="e-mail" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="form__item your-info">
-              <label class="your-info__label" for="tel">Телефон:*</label>
-              <input class="your-info__input input--tel" id ="tel" type="number" name="tel" placeholder="8 (960) 900-60-90" required>
-            </p>
+            <ul class="form__list contacts-list">
+              <li class="contacts-list__item">
+                <label class="contacts-list__label label" for="e-mail">E-mail:*</label>
+                <input class="contacts-list__input contacts-list__input--email input" id ="e-mail" type="text" name="e-mail" placeholder="kuklachev@gmail.com" required>
+              </li>
+              <li class="contacts-list__item">
+                <label class="contacts-list__label label" for="tel">Телефон:*</label>
+                <input class="contacts-list__input input--tel input" id ="tel" type="number" name="tel" placeholder="8 (960) 900-60-90" required>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__comment">
             <legend class="form__title">Комментарий</legend>
@@ -87,20 +91,20 @@
             <legend class="form__title">Дополнительно</legend>
             <ul class="form__list addition-list">
               <li class="addition-list__item">
-                <input class="addition-list__input" id="sweetener" type="checkbox" name="sweetener" checked>
-                <label class="addition-list__label" for="sweetener">Сахарозаменитель</label>
+                <input class="addition-list__input addition-list__input--checkbox" id="sweetener" type="checkbox" name="sweetener" checked>
+                <label class="addition-list__label label" for="sweetener">Сахарозаменитель</label>
               </li>
               <li class="addition__list">
-                <input class="addition-list__input" id="water" type="checkbox" name="water">
-                <label class="addition-list__label" for="water">Питьевая вода</label>
+                <input class="addition-list__input addition-list__input--checkbox" id="water" type="checkbox" name="water">
+                <label class="addition-list__label label" for="water">Питьевая вода</label>
               </li>
               <li class="addition__list">
-                <input class="addition-list__input" id="milk" type="checkbox" name="milk">
-                <label class="addition-list__label" for="milk">Молоко</label>
+                <input class="addition-list__input addition-list__input--checkbox" id="milk" type="checkbox" name="milk">
+                <label class="addition-list__label label" for="milk">Молоко</label>
               </li>
               <li class="addition__list">
-                <input class="addition-list__input" id="vitamins" type="checkbox" name="vitamins">
-                <label class="addition-list__label" for="vitamins">Витамины</label>
+                <input class="addition-list__input addition-list__input--checkbox" id="vitamins" type="checkbox" name="vitamins">
+                <label class="addition-list__label label" for="vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
@@ -119,7 +123,9 @@
           <h3 class="visually-hidden">Карта</h3>
           <img src="" width="" height="" alt="Карта расположения магазина Кэт энерджи">
         </a>
-        <img class="page-footer__logo-text" src="" width="128" height="24" alt="Логотип-название магазина Кэт энерджи">
+        <a class="contacts__logo" href="index.html">
+          <img class="page-footer__logo-text" src="" width="128" height="24" alt="Логотип-название магазина Кэт энерджи">
+        </a>
       </div>
       <div class="page-footer__social social">
         <ul class="social__list">

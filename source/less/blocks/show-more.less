@@ -1,5 +1,5 @@
 .show-more {
-  max-width: 320px;
+  max-width: @mobile-max-width;
   padding-top: 83px;
   padding-bottom: 25px;
 }
@@ -17,13 +17,15 @@
   margin: 0;
   padding-left: 50px;
   padding-bottom: 22px;
-  font-family: @secondFont;
+  font-family: @addition-font;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: @midnight-grey;
 }
 
 .show-more__button {
+  .button();
+  margin-left: 20px;
   background-color: @grey;
-  color: #444444;
+  color: @midnight-grey;
 }

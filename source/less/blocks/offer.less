@@ -1,5 +1,5 @@
 .offer {
-  max-width: 320px;
+  max-width: @mobile-max-width;
   margin-left: 20px;
   margin-top: 39px;
   margin-bottom: 35px;
@@ -9,10 +9,8 @@
 }
 
 .offer__description {
+  .font();
   margin: 0;
-  font-family: @secondFont;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  font-family: @addition-font;
   color: @white;
 }

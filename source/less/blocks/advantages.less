@@ -1,5 +1,5 @@
 .advantages {
-  max-width: 320px;
+  max-width: @mobile-max-width;
   margin-left: 20px;
   margin-bottom: 47px;
 }
@@ -13,14 +13,11 @@
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .reset-list();
 }
 
 .advantages__description {
-  max-width: 194px;
   padding-left: 78px;
-  font-family: @secondFont;
-  color: #444444;
+  font-family: @addition-font;
+  color: @midnight-grey;
 }

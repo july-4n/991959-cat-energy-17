@@ -1,12 +1,10 @@
 .social {
-  max-width: 320px;
+  max-width: @mobile-max-width;
   background-color: @grey;
 }
 
 .social__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .reset-list();
 }
 
 .social__item {

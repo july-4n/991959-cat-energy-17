@@ -1,26 +1,19 @@
 .program {
-  max-width: 320px;
+  max-width: @mobile-max-width;
   margin-left: 20px;
-  margin-right: 20px;
 }
 
 .program__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .reset-list();
 }
 
-.program__text {
-  margin: 0;
-  padding-top: 36px;
-  font-family: @secondFont;
-  color: #444444;
+.program__button {
+  .button();
 }
 
 .program__wrapper {
   background-color: @grey;
   margin-bottom: 20px;
-  padding-left: 21px;
   padding-right: 36px;
 }
 
@@ -34,8 +27,17 @@
   text-transform: uppercase;
 }
 
+.program__text {
+  margin: 0;
+  padding-top: 36px;
+  padding-left: 21px;
+  font-family: @addition-font;
+  color: @midnight-grey;
+}
+
 .program__link {
   display: block;
+  padding-left: 20px;
   padding-top: 44px;
   padding-bottom: 22px;
 }

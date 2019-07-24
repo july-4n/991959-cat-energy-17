@@ -1,22 +1,21 @@
 .info-address {
-  max-width: 320px;
+  max-width: @mobile-max-width;
   background-color: @grey;
 }
 
+.info-address--index {
+  background-color: @white;
+}
+
 .info-address__title {
+  .font();
   display: block;
-  max-width: 123px;
   padding-left: 20px;
   padding-top: 31px;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
 .info-address__address {
-  max-width: 136px;
-  font-family: @secondFont;
+  font-family: @addition-font;
   line-height: 20px;
-  font-weight: 400;
 }

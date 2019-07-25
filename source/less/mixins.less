@@ -1,4 +1,4 @@
-.font (@fz: 16px, @lh: 20px, @fw: 400) {
+.font (@fz: 14px, @lh: 18px, @fw: 400) {
   font-size: @fz;
   line-height: @lh;
   font-weight: @fw;
@@ -10,25 +10,9 @@
   list-style: none;
 }
 
-.button() {
-  .font();
-  display: block;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  padding-top: 13px;
-  width: 280px;
-  height: 40px;
-  background-color: @green;
-  color: @white;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .input {
-  .font();
+  .font(@fz: 16px);
   font-family: @base-font;
-  line-height: 18px;
   text-transform: uppercase;
   color: @midnight-grey;
 }

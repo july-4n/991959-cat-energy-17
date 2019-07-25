@@ -5,27 +5,32 @@
 }
 
 .show-more__title {
+  .font(@fz: 16px, @lh: 20px);
   margin: 0;
   padding-left: 60px;
   padding-bottom: 11px;
-  font-size: 16px;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
 .show-more__text {
+  .font(@fz: 12px, @lh: 16px);
   margin: 0;
   padding-left: 50px;
   padding-bottom: 22px;
   font-family: @addition-font;
-  font-size: 12px;
-  line-height: 16px;
   color: @midnight-grey;
 }
 
 .show-more__button {
-  .button();
+  .font(@fz: 16px, @lh: 20px);
+  display: block;
+  box-sizing: border-box;
   margin-left: 20px;
+  padding-top: 13px;
+  width: 280px;
+  height: 40px;
   background-color: @grey;
   color: @midnight-grey;
+  text-transform: uppercase;
+  text-align: center;
 }

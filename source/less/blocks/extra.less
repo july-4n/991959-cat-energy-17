@@ -5,39 +5,33 @@
 }
 
 .extra__title {
+  .font(@fz: 24px, @lh: 24px);
   margin: 0;
   margin-left: 19px;
   padding-bottom: 52px;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
 }
 
 .extra__list {
   .reset-list ();
   padding-left: 20px;
-
 }
 
 .extra__button {
-  .button();
   font-family: @base-font;
   margin-top: 14px;
   margin-bottom: 17px;
-  padding-top: 0;
   border: none;
 }
 
 .extra__subtitle {
-  .font();
-  line-height: 16px;
+  .font(@fz: 16px, @lh: 16px);
   color: #222222;
   text-transform: uppercase;
 }
 
 .extra__weight,
 .extra__price {
+  .font(@lh: 14px);
   font-family: @addition-font;
-  line-height: 14px;
   color: @midnight-grey;
 }

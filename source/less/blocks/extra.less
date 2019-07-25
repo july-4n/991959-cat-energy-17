@@ -1,0 +1,37 @@
+.extra {
+  max-width: @mobile-max-width;
+  padding-top: 31px;
+  padding-bottom: 14px;
+}
+
+.extra__title {
+  .font(@fz: 24px, @lh: 24px);
+  margin: 0;
+  margin-left: 19px;
+  padding-bottom: 52px;
+}
+
+.extra__list {
+  .reset-list ();
+  padding-left: 20px;
+}
+
+.extra__button {
+  font-family: @base-font;
+  margin-top: 14px;
+  margin-bottom: 17px;
+  border: none;
+}
+
+.extra__subtitle {
+  .font(@fz: 16px, @lh: 16px);
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.extra__weight,
+.extra__price {
+  .font(@lh: 14px);
+  font-family: @addition-font;
+  color: @midnight-grey;
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Главная страница магазина Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -39,19 +40,23 @@
       </div>
       <section class="program">
         <h2 class="visually-hidden">Программы питания для котов</h2>
-        <a class="program__button button" href="form.html">Подобрать программу</a>
+        <a class="button program__button" href="form.html">Подобрать программу</a>
         <ul class="program__list">
           <li class="program__item">
+            <div class="program__wrapper">
             <h3 class="program__title">Похудение</h3>
             <p class="program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="program__link" href="catalog-slim.html">Каталог Slim</a>
+          </div>
           </li>
-          <li>
+          <li class="program__item">
+            <div class="program__wrapper">
             <h3 class="program__title">Набор массы</h3>
             <p class="program__text">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="program__link" href="catalog-pro.html">Каталог pro</a>
+          </div>
           </li>
         </ul>
       </section>
@@ -100,7 +105,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <div class="contacts__info info-address">
+        <div class="contacts__info info-address info-address--index">
           <b class="info-address__title">приглашаем к сотрудничеству дилеров!</b>
           <p class="info-address__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>

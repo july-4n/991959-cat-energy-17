@@ -3,3 +3,21 @@
   margin-top: 24px;
   text-transform: uppercase;
 }
+.site-list {
+  min-width: @mobile-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 490px;
+  }
+}

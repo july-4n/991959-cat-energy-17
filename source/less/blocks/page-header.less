@@ -1,0 +1,38 @@
+.page-header {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  height: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: auto;
+    margin: 0;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+    margin: 0 auto;
+    background-color: lime;
+  }
+
+  .page-header__logo {
+    width: 180px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1220px;
+  }
+
+  .page-header__logo {
+    width: 210px;
+  }
+}

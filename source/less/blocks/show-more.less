@@ -1,13 +1,11 @@
 .show-more {
-  max-width: @mobile-max-width;
-  padding-top: 83px;
-  padding-bottom: 25px;
+  padding-top: 57px;
 }
 
 .show-more__title {
   .font(@fz: 16px, @lh: 20px);
   margin: 0;
-  padding-left: 60px;
+  padding-left: 43px;
   padding-bottom: 11px;
   text-transform: uppercase;
 }
@@ -15,22 +13,37 @@
 .show-more__text {
   .font(@fz: 12px, @lh: 16px);
   margin: 0;
-  padding-left: 50px;
+  padding-left: 30px;
   padding-bottom: 22px;
   font-family: @addition-font;
   color: @midnight-grey;
 }
 
 .show-more__button {
-  .font(@fz: 16px, @lh: 20px);
-  display: block;
-  box-sizing: border-box;
-  margin-left: 20px;
-  padding-top: 13px;
   width: 280px;
-  height: 40px;
+  padding-top: 13px;
   background-color: @grey;
   color: @midnight-grey;
-  text-transform: uppercase;
-  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .show-more__title {
+    padding-bottom: 0;
+  }
+
+  .show-more__button  {
+    width: 249px;
+    margin-top: 27px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .show-more {
+    padding-top: 48px;
+  }
+
+  .show-more__button  {
+    width: 169px;
+    margin-top: 0px;
+  }
 }

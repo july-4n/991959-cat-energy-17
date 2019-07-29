@@ -1,5 +1,4 @@
 .extra {
-  max-width: @mobile-max-width;
   padding-top: 31px;
   padding-bottom: 14px;
 }
@@ -16,7 +15,16 @@
   padding-left: 20px;
 }
 
+.extra__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  align-items: baseline;
+}
+
 .extra__button {
+  width: 280px;
   font-family: @base-font;
   margin-top: 14px;
   margin-bottom: 17px;
@@ -25,6 +33,7 @@
 
 .extra__subtitle {
   .font(@fz: 16px, @lh: 16px);
+  margin: 0;
   color: #222222;
   text-transform: uppercase;
 }
@@ -34,4 +43,44 @@
   .font(@lh: 14px);
   font-family: @addition-font;
   color: @midnight-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .extra__title {
+    .font(@fz: 36px, @lh: 36px);
+  }
+
+  .extra__button {
+    margin-right: 20px;
+    width: 633px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    width: 1220px;
+  }
+
+  .extra__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .extra__list {
+    width: 895px;
+  }
+
+  .extra__subtitle {
+    padding-right: 0;
+  }
+
+  .extra__button {
+    width: 245px;
+  }
 }

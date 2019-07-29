@@ -1,10 +1,9 @@
 .main-block {
-  max-width: @mobile-max-width;
   margin-bottom: 120px;
   background-image: url("../img/index-background-mobile@1x.jpg");
   height: 305px;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
 }
 
 .main-block__title {
@@ -19,4 +18,36 @@
   padding-left: 60px;
   text-transform: uppercase;
   color: @white;
+}
+
+.main-block__button {
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-block {
+    width: 708px;
+    background-image: none;
+  }
+
+  .main-block__title {
+    color: @black;
+  }
+
+  .main-block__slogan {
+    color: @black;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-block {
+    width: 1220px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    height: 696px;
+    background-position: right;
+  }
+
+  .main-block__image {
+    margin-left: 300px;
+  }
 }

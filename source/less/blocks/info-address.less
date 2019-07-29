@@ -1,6 +1,10 @@
 .info-address {
-  max-width: @mobile-max-width;
-  background-color: @grey;
+  min-width: @mobile-width;
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 31px;
 }
 
 .info-address--index {
@@ -9,13 +13,28 @@
 
 .info-address__title {
   .font(@fz: 16px, @lh: 20px);
+  width: 140px;
   display: block;
   padding-left: 20px;
-  padding-top: 31px;
   text-transform: uppercase;
 }
 
 .info-address__address {
   .font(@lh: 20px);
+  width: 140px;
+  margin: 0;
   font-family: @addition-font;
+}
+
+@media (min-width: @tablet-width) {
+  .info-address {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-address {
+    width: 570px;
+    justify-content: flex-start;
+  }
 }

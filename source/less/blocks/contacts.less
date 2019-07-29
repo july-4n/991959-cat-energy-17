@@ -1,0 +1,28 @@
+
+.contacts__wrapper {
+  min-width: @mobile-width;
+  display: flex;
+  flex-direction: column;
+  background-color: @grey;
+}
+
+.contacts__logo {
+  width: 128px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__info {
+    width: 708px;
+  }
+
+  .contacts__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__info {
+    width: 1220px;
+  }
+}

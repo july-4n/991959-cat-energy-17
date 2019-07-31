@@ -7,3 +7,21 @@
   text-transform: uppercase;
   color: #222222;
 }
+
+@media (min-width: @tablet-width) {
+  .addition-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .addition-list__item {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .addition-list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

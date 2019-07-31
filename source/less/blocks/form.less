@@ -1,5 +1,14 @@
+.form {
+  min-width: @mobile-width;
+  margin: 0 auto;
+}
+
 .form__title {
   .font(@fz: 24px, @lh: 24px);
+}
+
+.form__item {
+  margin: 0;
 }
 
 .form__button {
@@ -12,4 +21,33 @@
   .font(@lh: 16px);
   font-family: @addition-font;
   color: @midnight-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: @content-tablet-width;
+  }
+
+  .form__title {
+    .font(@fz: 36px, @lh: 36px);
+  }
+
+  .form__form-button {
+    display: flex;
+  }
+
+  .form__button {
+    width: 283px;
+    height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: @content-desktop-width;
+  }
+
+  .form__button {
+    width: 568px;
+  }
 }

@@ -9,6 +9,8 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    display: flex;
+    justify-content: space-between;
     width: auto;
     margin: 0;
   }
@@ -16,8 +18,7 @@
   .page-header__wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 708px;
+    width: @content-tablet-width;
     margin: 0 auto;
     background-color: lime;
   }
@@ -29,7 +30,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
-    width: 1220px;
+    width: @content-desktop-width;
   }
 
   .page-header__logo {

@@ -1,0 +1,33 @@
+.input[type="text"],
+.input[type="number"] {
+  min-width: 229px;
+  min-height: 45px;
+}
+
+.input {
+  .font(@fz: 16px);
+  box-sizing: border-box;
+  font-family: @base-font;
+  text-transform: uppercase;
+  color: @midnight-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .input[type="text"],
+  .input[type="number"] {
+    min-width: 551px;
+    min-height: 52px;
+  }
+
+  .input {
+    .font(@fz: 20px, @lh: 20px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input[type="text"],
+  .input[type="number"] {
+    min-width: 436px;
+    min-height: 52px;
+  }
+}

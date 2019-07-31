@@ -1,5 +1,6 @@
 .main-form {
   min-width: @mobile-width;
+  margin: 0 auto;
   margin-left: 20px;
   padding-bottom: 36px;
 }
@@ -16,4 +17,14 @@
 
 .main-form__write fieldset {
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__title {
+    .font(@fz: 60px, @lh: 60px);
+  }
+
+  .main-form__description {
+    .font(@fz: 20px, @lh: 30px);
+  }
 }

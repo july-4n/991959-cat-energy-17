@@ -1,10 +1,15 @@
 .page-header {
   width: @mobile-width;
+  min-height: 251px;
   margin: 0 auto;
+  padding-top: 11px;
 }
 
-.page-header__logo {
-  height: 65px;
+.page-header__logo img {
+  width: 190.4px;
+  height: 37.598px;
+  margin-left: 20px;
+  margin-bottom: 11px;
 }
 
 @media (min-width: @tablet-width) {
@@ -17,6 +22,7 @@
 
   .page-header__wrapper {
     display: flex;
+    justify-content: space-between;
     width: @content-tablet-width;
     margin: 0 auto;
   }

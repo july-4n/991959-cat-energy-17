@@ -27,62 +27,64 @@
         </ul>
       </nav>
     </header>
-    <main class="inner-page-form">
+    <main class="page-main">
       <section class="main-form">
         <h1 class="main-form__title">Подбор программы</h1>
         <p class="main-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="main-form__write form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__items">
-            <legend class="visually-hidden">Информация о животном</legend>
-            <ul class="form__list info-list">
-              <li class="info-list__item">
-                <label class="info-list__label label-name label" for="cat-name">Имя:*</label>
-                <input class="info-list__input input-name input" id="cat-name" type="text" name="name" placeholder="Барсик" required>
-              </li>
-              <li class="info-list__item">
-                <label class="info-list__label label-weight label" for="cat-weight">Вес (кг):*</label>
-                <input class="info-list__input input-weight input" id="cat-weight" type="number" name="weight" placeholder="7" required>
-              </li>
-              <li class="info-list__item">
-                <label class="info-list__label label-age label" for="cat-age">Возраст (лет):</label>
-                <input class="info-list__input input-age input" id="cat-age" type="number" name="age" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form__items">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <ul class="form__list program-list">
-              <li class="program-list__item">
-                <input class="program-list__input program-list__input--radio" id="weight-loss" type="radio" name="program-option" checked>
-                <label class="program-list__label label" for="weight-loss">Похудение</label>
-              </li>
-              <li class="program-list__item">
-                <input class="program-list__input program-list__input--radio" id="put-on-weight" type="radio" name="program-option">
-                <label class="program-list__label label" for="put-on-weight">Набор массы</label>
-              </li>
-              <li class="program-list__item">
-                <input class="program-list__input program-list__input--radio" id="advice" type="radio" name="program-option">
-                <label class="program-list__label label" for="advice">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__wrapper">
+            <fieldset class="form__items">
+              <legend class="visually-hidden">Информация о животном</legend>
+              <ul class="form__list info-list">
+                <li class="info-list__item">
+                  <label class="info-list__label label-name" for="cat-name">Имя:*</label>
+                  <input class="info-list__field field-name field" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+                </li>
+                <li class="info-list__item">
+                  <label class="info-list__label label-weight" for="cat-weight">Вес (кг):*</label>
+                  <input class="info-list__field field-weight field" id="cat-weight" type="number" name="weight" placeholder="7" required>
+                </li>
+                <li class="info-list__item">
+                  <label class="info-list__label label-age" for="cat-age">Возраст (лет):</label>
+                  <input class="info-list__field field-age field" id="cat-age" type="number" name="age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__items">
+              <legend class="visually-hidden">Выбор программы</legend>
+              <ul class="form__list program-list">
+                <li class="program-list__item">
+                  <input class="program-list__input program-list__input--radio" id="weight-loss" type="radio" name="program-option" checked>
+                  <label class="program-list__label label" for="weight-loss">Похудение</label>
+                </li>
+                <li class="program-list__item">
+                  <input class="program-list__input program-list__input--radio" id="put-on-weight" type="radio" name="program-option">
+                  <label class="program-list__label label" for="put-on-weight">Набор массы</label>
+                </li>
+                <li class="program-list__item">
+                  <input class="program-list__input program-list__input--radio" id="advice" type="radio" name="program-option">
+                  <label class="program-list__label label" for="advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="form__contacts">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <ul class="form__list contacts-list">
               <li class="contacts-list__item">
-                <label class="contacts-list__label label" for="email">E-mail:*</label>
-                <input class="contacts-list__input contacts-list__input--email input" id="email" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+                <label class="contacts-list__label" for="email">E-mail:*</label>
+                <input class="contacts-list__field field-email field" id="email" type="text" name="email" placeholder="kuklachev@gmail.com" required>
               </li>
               <li class="contacts-list__item">
-                <label class="contacts-list__label label" for="tel">Телефон:*</label>
-                <input class="contacts-list__input input--tel input" id="tel" type="number" name="tel" placeholder="8 (960) 900-60-90" required>
+                <label class="contacts-list__label" for="tel">Телефон:*</label>
+                <input class="contacts-list__field field-tel field" id="tel" type="number" name="tel" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__comment">
             <legend class="form__title">Комментарий</legend>
             <p class="form__item">
-              <input class="form__input input-comment input" id="comment" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
+              <input class="form__field field-comment field" id="comment" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
             </p>
           </fieldset>
           <fieldset class="form__addition">

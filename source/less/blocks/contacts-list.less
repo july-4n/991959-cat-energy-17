@@ -3,13 +3,38 @@
 }
 
 .contacts-list__item {
-  .font(@fz: 16px);
-  text-transform: uppercase;
-  color: #222222;
+  padding-bottom: 14px;
+}
+
+.contacts-list__field--email {
+  min-width: 219px;
+}
+
+.contacts-list__field--tel {
+  min-width: 204px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-list__field--email {
+    min-width: 551px;
+  }
+
+  .contacts-list__field--tel {
+    min-width: 535px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts-list {
     display: flex;
+  }
+
+  .contacts-list__field--email {
+    min-width: 486px;
+    margin-right: 78px;
+  }
+
+  .contacts-list__field--tel {
+    min-width: 472px;
   }
 }

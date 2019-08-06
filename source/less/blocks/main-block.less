@@ -8,6 +8,20 @@
   background-position: center;
 }
 
+.main-block::before {
+  content: "";
+
+  position: absolute;
+  top: 431px;
+  left: 139px;
+  width: 270px;
+  height: 280px;
+  z-index: 0;
+  background-image: url("../img/index-can-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .main-block__title {
   .font(@fz: 36px, @lh: 36px);
   margin: 0;
@@ -33,23 +47,36 @@
 
   .main-block__title {
     .font (@fz: 60px, @lh: 60px);
+    margin-top: 85px;
+    padding-left: 120px;
+    width: 410px;
     color: @black;
   }
 
   .main-block__slogan {
+    .font (@fz: 20px, @lh: 20px);
+    padding-top: 33px;
+    padding-left: 118px;
     color: @black;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-block {
+    display: flex;
+    flex-direction: column;
     width: @content-desktop-width;
     background-image: url("../img/index-background-desktop@1x.jpg");
     height: 696px;
     background-position: right;
   }
 
-  .main-block__image {
-    margin-left: 300px;
+  .main-block__title {
+    padding-top: 113px;
+    padding-left: 193px;
+  }
+
+  .main-block__slogan {
+    padding-left: 190px;
   }
 }

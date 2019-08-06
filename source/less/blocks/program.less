@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.program-block__button {
+.program__button {
   .font(@fz: 14px, @lh: 18px);
   width: 280px;
   margin: 0 auto;
@@ -18,7 +18,7 @@
 }
 
 .program__item {
-  width: 280px;
+  width: @content-mobile-width;
   margin: 0 auto;
   background-color: @grey;
 }
@@ -46,10 +46,39 @@
 }
 
 .program__link {
+  .font(@fz: 16px, @lh: 16px);
+  position: relative;
   display: block;
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.program__link::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 20px;
+
+  width: 240px;
+  height: 1px;
+  background-color: #111111;
+  opacity: 0.1;
+
+}
+
+.program__link::after {
+  content: "";
+  position: absolute;
+
+  top: 25px;
+  left: 120px;
+
+  width: 24.2px;
+  height: 11px;
+  background-image: url("../img/icon-right-arrow-long.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -57,14 +86,42 @@
     width: @content-tablet-width;
   }
 
-  .program-block__button {
-    margin-top: 45px;
+  .program__button {
+    .font(@fz: 20px, @lh: 20px);
+    margin-left: 120px;
+    margin-top: -123px;
+    margin-bottom: 622px;
+    padding-top: 17px;
     width: 245px;
     height: 52px;
   }
 
   .program__item {
     width: 100%;
+  }
+
+  .program__title {
+    .font(@fz: 36px; @lh:37.02px);
+    padding-top: 81px;
+  }
+
+  .program__text {
+    .font(@fz: 16px, @lh: 24px);
+    padding-top: 26px;
+  }
+
+  .program__link {
+    .font(@fz: 20px, @lh: 20px);
+    padding-top: 61px;
+    padding-bottom: 62px;
+  }
+
+  .program__link::before {
+    display: none;
+  }
+
+  .program__link::after {
+    left: 140px;
   }
 }
 
@@ -73,16 +130,41 @@
     width: @content-desktop-width;
   }
 
-  .main-block__button {
-    margin-top: 326px;
+  .program__button {
+    margin-top: -346px;
+    margin-bottom: 268px;
+    margin-left: 190px;
   }
 
-  .program__item {
-    width: 570px;
+  .program__wrapper {
+    margin: 0;
+    padding: 0;
   }
 
   .program__list {
     display: flex;
     justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .program__item {
+    width: 570px;
+    margin-right: 80px;
+  }
+
+  .program__item:last-child {
+    margin-right: 0;
+  }
+
+  .program__text {
+    padding-bottom: 0;
+    padding-top: 75px;
+    padding-right: 52px;
+  }
+
+  .program__link {
+    padding-top: 36px;
+    padding-right: 53px;
   }
 }

@@ -12,11 +12,11 @@
   text-transform: uppercase;
 
   border-bottom: 1px solid #e6e6e6;
-}
 
-.site-list__item:first-child {
-  padding-bottom: 24px;
-  border-top: 1px solid #e6e6e6;
+  &:first-child {
+    padding-bottom: 24px;
+    border-top: 1px solid #e6e6e6;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -25,10 +25,29 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .site-list__item,
+  .site-list__item:first-child {
+    border:none;
+  }
+
+  .site-list__item {
+    .font (@fz: 18px, @lh: 24.86px, @fw: 400);
+    padding: 0;
+    padding-top: 36px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
     width: 490px;
+  }
+
+  .site-list__item {
+    padding-top: 77px;
+  }
+
+  .site-list__item a {
+    color: #ffffff;
   }
 }

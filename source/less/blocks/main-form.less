@@ -1,10 +1,11 @@
 .main-form {
-  min-width: @mobile-width;
+  width: @content-mobile-width;
   margin: 0 auto;
   padding-bottom: 36px;
 }
 
 .main-form__title {
+  .reset-list();
   .font(@fz: 36px, @lh: 60px);
 }
 
@@ -15,15 +16,34 @@
 }
 
 .main-form__write fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 @media (min-width: @tablet-width) {
+  .main-form {
+    width: @content-tablet-width;
+  }
+
   .main-form__title {
     .font(@fz: 60px, @lh: 60px);
+    padding-top: 64px;
+    padding-bottom: 53px;
   }
 
   .main-form__description {
     .font(@fz: 20px, @lh: 30px);
+    padding-bottom: 69px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form {
+    width: @content-desktop-width;
+  }
+
+  .main-form__title {
+    padding-top: 81px;
   }
 }

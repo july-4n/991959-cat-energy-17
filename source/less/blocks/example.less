@@ -1,6 +1,11 @@
 .example {
-  padding-left: 20px;
+  min-width: @mobile-width;
   background-color: @grey;
+}
+
+.example__wrap {
+  width: @content-mobile-width;
+  margin: 0 auto;
 }
 
 .example__title {
@@ -22,14 +27,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .example__wrap {
+    width: @content-tablet-width;
+  }
+
   .example__wrapper {
+    width: @content-tablet-width;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .example {
+  .example__wrap {
+    width: @content-desktop-width;
     display: flex;
   }
 

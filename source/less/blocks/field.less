@@ -1,10 +1,10 @@
 .field {
   .font(@fz: 16px);
   box-sizing: border-box;
+  min-height: 45px;
   font-family: @base-font;
   text-transform: uppercase;
   color: @midnight-grey;
-  min-height: 45px;
 }
 
 .field-name {
@@ -17,19 +17,6 @@
 
 .field-age {
   min-width: 172px;
-}
-
-.field-email {
-  min-width: 219px;
-}
-
-.field-tel {
-  min-width: 204px;
-}
-
-.field-comment {
-  min-width: 280px;
-  min-height: 150px;
 }
 
 @media (min-width: @tablet-width) {
@@ -49,19 +36,6 @@
   .field-age {
     min-width: 497px;
   }
-
-  .field-email {
-    min-width: 551px;
-  }
-
-  .field-tel {
-    min-width: 535px;
-  }
-
-  .field-comment {
-    min-width: 631px;
-    min-height: 174px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -77,15 +51,7 @@
     min-width: 436px;
   }
 
-  .field-email {
-    min-width: 486px;
-  }
-
   .field-tel {
     min-width: 472px;
-  }
-
-  .field-comment {
-    min-width: 1220px;
   }
 }

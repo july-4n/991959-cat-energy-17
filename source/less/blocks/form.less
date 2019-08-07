@@ -13,10 +13,10 @@
   .font(@fz: 24px, @lh: 24px);
   padding-top: 31px;
   padding-bottom: 30px;
-}
 
-.form__title--cat-owner {
-  padding-right: 121px;
+  &--cat-owner {
+    padding-right: 121px;
+  }
 }
 
 .form__textarea {
@@ -34,9 +34,9 @@
 
 .form__field--textarea {
   min-width: @content-mobile-width;
-  padding-top: 15px;
-  padding-bottom: 118px;
-  padding-left: 16px;
+  height: 150px;
+  resize: none;
+  overflow: auto;
 }
 
 .form__button {
@@ -63,9 +63,7 @@
   .form__field--textarea {
     display: block;
     min-width: 631px;
-    padding-top: 17px;
-    padding-bottom: 137px;
-    padding-left: 20px;
+    height: 174px;
   }
 
   .form__form-button {

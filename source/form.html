@@ -40,15 +40,15 @@
               <ul class="form__list info-list">
                 <li class="info-list__item">
                   <label class="info-list__label label-name" for="cat-name">Имя:*</label>
-                  <input class="info-list__field field-name field" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+                  <input class="info-list__field info-list__field--name field" id="cat-name" type="text" name="name" placeholder="Барсик" required>
                 </li>
                 <li class="info-list__item">
                   <label class="info-list__label label-weight" for="cat-weight">Вес (кг):*</label>
-                  <input class="info-list__field field-weight field" id="cat-weight" type="number" name="weight" placeholder="7" required>
+                  <input class="info-list__field info-list__field--weight field" id="cat-weight" type="number" name="weight" placeholder="7" required>
                 </li>
                 <li class="info-list__item">
                   <label class="info-list__label label-age" for="cat-age">Возраст (лет):</label>
-                  <input class="info-list__field field-age field" id="cat-age" type="number" name="age" placeholder="7">
+                  <input class="info-list__field info-list__field--age field" id="cat-age" type="number" name="age" placeholder="7">
                 </li>
               </ul>
             </fieldset>
@@ -86,7 +86,7 @@
           <fieldset class="form__textarea">
             <legend class="form__title">Комментарий</legend>
             <p class="form__item">
-              <input class="form__field--textarea field" id="textarea" type="text" name="textarea" placeholder="Расскажите обо всех повадках кота">
+              <textarea class="form__field form__field--textarea field" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
           </fieldset>
           <fieldset class="form__addition">
@@ -131,22 +131,20 @@
           <img class="map__image" src="img/map.jpg" alt="Карта расположения магазина Кэт энерджи">
         </div>
         <div class="contacts__wrapper">
-          <a class="contacts__logo" href="index.html">
+          <a class="contacts__logo">
             <img class="page-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Логотип-название магазина Кэт энерджи">
           </a>
-          <div class="page-footer__social social">
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="social social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            </li>
+          </ul>
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">Логотип HTML Academy</a>

@@ -12,16 +12,28 @@
   .font(@fz: 36px, @lh: 60px);
   margin: 0;
   padding: 0;
-  padding-top: 33px;
+  padding-top: 17px;
 }
 
 .example__description {
-  padding: 33px 34px 27px 0;
+  padding: 23px 14px 13px 0;
   font-family: @addition-font;
+  color: @midnight-grey;
 }
 
+.example__wrapper {
+  padding-top: 12px;
+}
 .example__stats {
   display: flex;
+  justify-content: space-between;
+}
+
+.example__value {
+  .font(@lh: 20px);
+  text-transform: uppercase;
+  padding-top: 26px;
+  padding-left: 47px;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,6 +46,10 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+
+  .example__value {
+    .font(@fz: 20px, @lh: 20px);
   }
 }
 

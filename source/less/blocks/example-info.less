@@ -1,4 +1,48 @@
 .example-info {
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.example-info__data {
+  .font(@fz: 24px, @lh: 24px);
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.example-info__data--weight {
+  padding: 17px 43px 18px 44px;
+}
+
+.example-info__data--days {
+  padding: 13px 23px 15px;
+}
+
+.example-info__text {
+  .font(@fz: 12px, @lh: 12px);
+  font-family: @addition-font;
+  position: absolute;
+  width: 57px;
+  text-align: center;
+  background-color: @grey;
+  color: @midnight-grey;
+}
+
+.example-info__text--weight {
+  padding-top: 4px;
+  padding-left: 20px;
+  top: 45px;
+  left: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .example-info__data {
+    .font(@fz: 30px, @lh: 37px);
+  }
+
+  .example-info__text {
+    .font(@fz: 14px, @lh: 14px);
+  }
 }

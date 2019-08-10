@@ -7,11 +7,10 @@
 }
 
 .contacts__wrapper {
-  width: @mobile-width;
+  width: @content-mobile-width;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: @grey;
 }
 
 .contacts__logo {
@@ -19,15 +18,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__info {
+    width: auto;
+    padding: 66px 72px 59px 71px;
+  }
+
   .contacts__wrapper {
     width: auto;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .contacts__info {
-    width: auto;
-    padding: 66px 72px 59px 71px;
   }
 }
 

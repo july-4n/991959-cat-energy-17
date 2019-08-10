@@ -1,4 +1,7 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: @mobile-width;
   margin: 0 auto;
   text-align: center;
@@ -10,20 +13,17 @@
   padding-top: 22px;
   padding-bottom: 23px;
   text-transform: uppercase;
-
   border-bottom: 1px solid #e6e6e6;
 
   &:first-child {
-    padding-bottom: 23px;
     border-top: 1px solid #e6e6e6;
   }
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
+    flex-direction: row;
     width: 450px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .site-list__item,

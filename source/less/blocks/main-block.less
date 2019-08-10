@@ -1,36 +1,28 @@
 .main-block {
-  position: relative;
   width: @mobile-width;
   margin: 0 auto;
+}
 
-  &::after {
-    content: "";
+.main-block__promo {
+  position: relative;
+}
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 320px;
-    height: 305px;
-    z-index: -1;
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
-  }
+.main-block__promo::after {
+  content: "";
 
-  &::before {
-    content: "";
+  position: absolute;
+  top: 0;
+  left:0;
 
-    position: absolute;
-    top: 167px;
-    left: 13px;
-    width: 270px;
-    height: 280px;
-    z-index: 0;
-    background-image: url("../img/index-can-mobile.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+  width: 320px;
+  height: 305px;
+
+  z-index: -1;
+  background-color: #64a83b;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-block__title {
@@ -44,16 +36,23 @@
 .main-block__slogan {
   .font(@lh: 14px);
   display: block;
-  margin-bottom: 302px;
   padding-top: 25px;
   padding-left: 60px;
   text-transform: uppercase;
   color: @white;
 }
 
+.main-block__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-block__pict {
+  margin-top: 35px;
+}
+
 .main-block__button {
   .font(@fz: 14px, @lh: 18px);
-  position: relative;
   width: 280px;
   margin: 0 auto;
   padding-top: 11px;
@@ -62,54 +61,68 @@
 @media (min-width: @tablet-width) {
   .main-block {
     width: @content-tablet-width;
+  }
 
-    &::after {
-      background-image: none;
-    }
+  .main-block__promo::after {
+    background-color: @white;
+    background-image: none;
   }
 
   .main-block__title {
     .font (@fz: 60px, @lh: 60px);
-    margin-top: 85px;
+    width: 427px;
+    padding-top: 50px;
     padding-left: 90px;
-    width: 410px;
     color: @black;
   }
 
   .main-block__slogan {
     .font (@fz: 20px, @lh: 20px);
+    padding: 0;
     padding-top: 33px;
     padding-left: 90px;
     color: @black;
   }
 
+  .main-block__pict {
+    margin-top: -80px;
+    order: 2;
+    z-index: -1;
+  }
+
   .main-block__button {
     .font(@fz: 20px, @lh: 20px);
     padding-top: 17px;
+    margin-top: 50px;
+    margin-left: 90px;
     width: 245px;
     height: 52px;
-    top: -200px;
-    left: -130px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-block {
-    display: flex;
-    flex-direction: column;
     width: @content-desktop-width;
+  }
 
-    &::after {
-      content: "";
+  .main-block__promo::after {
+    content: "";
 
-      position: absolute;
-      top: -125px;
-      left: 610px;
-      width: 720px;
-      height: 696px;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-    }
+    position: absolute;
+    top: -125px;
+    left: 600px;
+
+    width: 720px;
+    height: 696px;
+
+    z-index: -1;
+    background-color: #64a83b;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .main-block__wrap {
+    flex-direction: row;
   }
 
   .main-block__title {
@@ -118,10 +131,5 @@
 
   .main-block__slogan {
     padding-left: 80px;
-  }
-
-  .main-block__button {
-    top: -180px;
-    left: -409px;
   }
 }

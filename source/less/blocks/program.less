@@ -1,7 +1,7 @@
 .program {
-  min-width: @mobile-width;
+  width: @mobile-width;
   margin: 0 auto;
-  margin-top: 22px;
+  margin-top: 122px;
 }
 
 .program__list {
@@ -38,9 +38,7 @@
   .font(@fz: 16px, @lh: 16px);
   position: relative;
   display: block;
-  padding-left: 20px;
-  padding-top: 19px;
-  padding-bottom: 22px;
+  padding: 19px 0 22px 20px;
   text-transform: uppercase;
 
   &::before {
@@ -81,24 +79,36 @@
   .program__title {
     .font(@fz: 36px; @lh:37px);
     padding-top: 81px;
+    padding-left: 53px;
   }
 
   .program__text {
     .font(@fz: 16px, @lh: 24px);
+    width: 340px;
+    padding: 0;
     padding-top: 26px;
+    padding-left: 53px;
+
+    &--slim {
+      width: 371px;
+    }
+
+    &--pro {
+      width: 340px;
+    }
   }
 
   .program__link {
     .font(@fz: 20px, @lh: 20px);
-    padding-top: 61px;
-    padding-bottom: 62px;
+    padding: 61px 0 62px 53px;
 
     &::before {
       display: none;
     }
 
     &::after {
-      left: 140px;
+      top: 66px;
+      left: 181px;
     }
   }
 }
@@ -106,6 +116,7 @@
 @media (min-width: @desktop-width) {
   .program {
     width: @content-desktop-width;
+    margin-top: 250px;
   }
 
   .program__wrapper {

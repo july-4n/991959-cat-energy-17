@@ -1,8 +1,46 @@
+.form {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.form__list {
+  .font(@fz: 16px);
+  text-transform: uppercase;
+  color: #222222;
+}
+
 .form__title {
   .font(@fz: 24px, @lh: 24px);
+  padding-top: 31px;
+  padding-bottom: 30px;
+
+  &--cat-owner {
+    padding-right: 121px;
+  }
+}
+
+.form__textarea {
+  margin: 0;
+  padding: 0;
+}
+
+.form__items {
+  .reset-list();
+}
+
+.form__item {
+  margin: 0;
+}
+
+.form__comment {
+  min-width: @content-mobile-width;
+  height: 150px;
+  resize: none;
+  overflow: auto;
 }
 
 .form__button {
+  width: 280px;
   font-family: @base-font;
   margin-bottom: 34px;
 }
@@ -11,4 +49,52 @@
   .font(@lh: 16px);
   font-family: @addition-font;
   color: @midnight-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: @content-tablet-width;
+  }
+
+  .form__title {
+    .font(@fz: 36px, @lh: 36px);
+  }
+
+  .form__comment {
+    display: block;
+    min-width: 631px;
+    height: 174px;
+  }
+
+  .form__form-button {
+    display: flex;
+    padding-top: 54px;
+  }
+
+  .form__button {
+    width: 283px;
+    height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: @content-desktop-width;
+  }
+
+  .form__wrapper {
+    display: flex;
+  }
+
+  .form__comment {
+    min-width: 1220px;
+  }
+
+  .form__form-button {
+    padding-top: 68px;
+  }
+
+  .form__button {
+    width: 568px;
+  }
 }

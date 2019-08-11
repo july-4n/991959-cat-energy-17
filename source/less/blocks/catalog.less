@@ -1,5 +1,19 @@
 .catalog__list {
   .reset-list();
-  padding-left: 20px;
-  padding-right: 20px;
+  width: @content-mobile-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    width: @content-tablet-width;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    width: @content-desktop-width;
+  }
 }

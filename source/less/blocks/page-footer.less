@@ -1,0 +1,32 @@
+.page-footer {
+  min-width: @mobile-width;
+  background: linear-gradient(#ffffff 116px, #f2f2f2 116px);
+}
+
+.page-footer__contacts {
+  min-width: @content-mobile-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    min-width: @tablet-width;
+    background: linear-gradient(#ffffff 172px, #f2f2f2 172px);
+  }
+
+  .page-footer__contacts {
+    width: @content-tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    min-width: @desktop-width;
+    background: none;
+    background-color: @grey;
+  }
+
+  .page-footer__contacts {
+    width: @content-desktop-width;
+  }
+}

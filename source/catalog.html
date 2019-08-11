@@ -2,22 +2,19 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Каталог товаров магазина Кэт энерджи</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo logo">
-        <a class="logo__link" href="index.html">
-          <img class="logo__image" src="img/logo-image.svg" width="33" height="38" alt="Логотип магазина Кэт энерджи">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-image.svg" width="190" height="38" alt="Логотип магазина Кэт энерджи">
         </a>
-        <a class="logo__link" href="index.html">
-          <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Логотип-название магазина Кэт энерджи">
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
+        <nav class="main-nav main-nav--opened">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
@@ -29,8 +26,8 @@
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="inner-page">
       <section class="catalog-info">
@@ -198,76 +195,82 @@
               </table>
               <a class="catalog-item__order button modal-order" href="order.html">Заказать</a>
             </li>
+            <li class="catalog__item catalog-item show-more">
+              <h2 class="show-more__title">Показать еще 100500 товаров</h2>
+              <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
+              <a class="show-more__button" href="all-items.html">Показать все</a>
+            </li>
           </ul>
-        </div>
-        <div class="show-more">
-          <h2 class="show-more__title">Показать еще 100500 товаров</h2>
-          <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-          <a class="show-more__button" href="all-items.html">Показать все</a>
         </div>
         <div class="extra">
           <h2 class="extra__title">Дополнительные товары</h2>
-          <ul class="extra__list">
-            <li class="extra__item">
-              <h3 class="extra__subtitle">Сахарозаменитель</h3>
-              <span class="extra__weight">1 упаковка (100 г)</span>
-              <span class="extra__price">200 Р.</span>
-              <button class="extra__button button" type="button">Заказать</button>
-            </li>
-            <li class="extra__item">
-              <h3 class="extra__subtitle">Питьевая вода</h3>
-              <span class="extra__weight">5 литров</span>
-              <span class="extra__price">50 Р.</span>
-              <button class="extra__button button" type="button">Заказать</button>
-            </li>
-            <li class="extra__item">
-              <h3 class="extra__subtitle">Молоко</h3>
-              <span class="extra__weight">1 литр</span>
-              <span class="extra__price">100 Р.</span>
-              <button class="extra__button button" type="button">Заказать</button>
-            </li>
-            <li class="extra__item">
-              <h3 class="extra__subtitle">Витамины</h3>
-              <span class="extra__weight">1 упаковка (30 г)</span>
-              <span class="extra__price">300 Р.</span>
-              <button class="extra__button button" type="button">Заказать</button>
-            </li>
-          </ul>
-        </div>
-        <div class="offer">
-          <p class="offer__description">Закажите все и получите чехол для кота в подарок!</p>
+          <div class="extra__wrapper">
+            <ul class="extra__list">
+              <li class="extra__item">
+                <h3 class="extra__subtitle">Сахарозаменитель</h3>
+                <span class="extra__weight">1 упаковка (100 г)</span>
+                <span class="extra__price">200 Р.</span>
+                <a class="extra__button button" href="order.html">Заказать</a>
+              </li>
+              <li class="extra__item">
+                <h3 class="extra__subtitle">Питьевая вода</h3>
+                <span class="extra__weight">5 литров</span>
+                <span class="extra__price">50 Р.</span>
+                <a class="extra__button button" href="order.html">Заказать</a>
+              </li>
+              <li class="extra__item">
+                <h3 class="extra__subtitle extra__subtitle--milk">Молоко</h3>
+                <span class="extra__weight">1 литр</span>
+                <span class="extra__price">100 Р.</span>
+                <a class="extra__button button" href="order.html">Заказать</a>
+              </li>
+              <li class="extra__item">
+                <h3 class="extra__subtitle">Витамины</h3>
+                <span class="extra__weight">1 упаковка (30 г)</span>
+                <span class="extra__price">300 Р.</span>
+                <a class="extra__button button" href="order.html">Заказать</a>
+              </li>
+            </ul>
+            <div class="offer">
+              <p class="offer__description">Закажите все и получите чехол для кота в подарок!</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <div class="contacts__info info-address">
-          <b class="info-address__title">приглашаем к сотрудничеству дилеров!</b>
-          <p class="info-address__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__wrap">
+          <div class="contacts__info info-address info-address--index">
+            <b class="info-address__title">приглашаем к сотрудничеству дилеров!</b>
+            <p class="info-address__address">ул. Большая Конюшенная, д. 19/8
+              <span class="info-address__city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <div class="contacts__map map">
           <img class="map__image" src="img/map.jpg" alt="Карта расположения магазина Кэт энерджи">
         </div>
-        <a class="contacts__logo" href="index.html">
-          <img class="page-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Логотип-название магазина Кэт энерджи">
-        </a>
-      </div>
-      <div class="page-footer_social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">Логотип HTML Academy</a>
+        <div class="contacts__wrapper">
+          <a class="contacts__logo" href="index.html">
+            <img class="page-footer__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Логотип-название магазина Кэт энерджи">
+          </a>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            </li>
+          </ul>
+          <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">Логотип HTML Academy</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

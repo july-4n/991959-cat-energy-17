@@ -1,10 +1,23 @@
 .offer {
+  position: relative;
   width: 280px;
   height: 289px;
   margin-top: 39px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    left: 112px;
+
+    width: 56px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+  }
 }
 
 .offer__description {
@@ -18,14 +31,38 @@
 
 @media (min-width: @tablet-width) {
   .offer {
+    display: flex;
+    justify-content: flex-end;
     width: auto;
     margin: 0;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .offer::before {
+    top: 108px;
+    left: 92px;
+  }
+
+  .offer__description {
+    width: 158px;
+    margin-top: -75px;
+    text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .offer {
     background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .offer::before {
+    top: 65px;
+    left: 110px;
+  }
+
+  .offer__description {
+    width: 158px;
+    margin-top: 0;
+    text-align: center;
   }
 }

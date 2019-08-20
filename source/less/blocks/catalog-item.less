@@ -1,4 +1,5 @@
 .catalog-item {
+  padding-left: 20px;
   box-sizing: border-box;
   border: 1px solid #ededed;
 }
@@ -7,14 +8,15 @@
   .font(@fz: 16px, @lh: 20px);
   width: 72px;
   margin: 0;
-  margin-left: 130px;
-  padding: 25px 0 18px 0;
+  margin-left: 139px;
+  padding: 13px 0 18px 0;
+  text-transform: uppercase;
 }
 
 .catalog-item__table {
   .font(@fz: 12px, @lh: 16px);
-  width: 149px;
-  margin-left: 130px;
+  width: 140px;
+  margin-left: 139px;
   font-family: @addition-font;
   color: @midnight-grey;
 }
@@ -33,14 +35,31 @@
 
 @media (min-width: @tablet-width) {
   .catalog-item {
+    position: relative;
     width: 324px;
     margin-top: 140px;
     margin-right: 60px;
     padding-left: 38px;
     padding-right: 39px;
+    border: none;
 
     &:nth-child(2n) {
       margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 431px;
+
+      background-color: #f2f2f2;
+
+      z-index: -1;
     }
   }
 

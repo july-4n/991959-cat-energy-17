@@ -1,13 +1,19 @@
 .info-list {
   .reset-list();
+  margin-left: 20px;
 }
 
 .info-list__item {
   margin-bottom: 14px;
 }
 
+.info-list__item:last-child {
+  margin-bottom: 21px;
+}
+
 .info-list__label {
   margin-bottom: 14px;
+  padding-right: 9px;
 }
 
 .info-list__field {
@@ -16,7 +22,7 @@
   }
 
   &--weight {
-    min-width: 204px;
+    min-width: 206px;
   }
 
   &--age {
@@ -25,13 +31,29 @@
 }
 
 @media (min-width: @tablet-width) {
+  .info-list {
+    margin-left: 42px;
+  }
+
+  .info-list__item {
+    margin-bottom: 20px;
+  }
+
+  .info-list__item:last-child {
+    margin-bottom: 71px;
+  }
+
+  .info-list__label {
+    padding-right: 13px;
+  }
+
   .info-list__field {
     &--name {
       min-width: 567px;
     }
 
     &--weight {
-      min-width: 536px;
+      min-width: 538px;
     }
 
     &--age {
@@ -41,6 +63,15 @@
 }
 
 @media (min-width: @desktop-width) {
+  .info-list {
+    width: 570px;
+    margin-left: 3px;
+  }
+
+  .info-list__label {
+    padding-right: 10px;
+  }
+
   .info-list__field {
     &--name {
       min-width: 506px;

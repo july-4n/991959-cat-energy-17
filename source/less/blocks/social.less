@@ -1,5 +1,20 @@
 .social {
   .reset-list();
-  width: 124px;
   display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 130px;
+}
+
+.social__link {
+  fill: #666666;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
 }

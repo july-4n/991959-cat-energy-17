@@ -3,46 +3,110 @@
   margin: 0 auto;
 }
 
-.form__list {
-  .font(@fz: 16px);
-  text-transform: uppercase;
-  color: #222222;
-}
-
-.form__title {
-  .font(@fz: 24px, @lh: 24px);
-  padding-top: 31px;
-  padding-bottom: 30px;
-
-  &--cat-owner {
-    padding-right: 121px;
-  }
-}
-
-.form__textarea {
-  margin: 0;
-  padding: 0;
+.form__wrapper {
+  margin-bottom: 29px;
 }
 
 .form__items {
   .reset-list();
 }
 
-.form__item {
+.form__list {
+  .font(@fz: 16px);
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.form__contacts {
+  position: relative;
+}
+
+.form__contacts::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  right: 0;
+
+  width: 99px;
+  height: 3px;
+
+  background-color: @green;
+}
+
+.form__title {
+  .font(@fz: 24px, @lh: 24px);
+  position: relative;
+  padding-left: 19px;
+
+  &--cat-owner {
+    width: 202px;
+  }
+}
+
+.form__textarea {
+  position: relative;
   margin: 0;
+  padding: 0;
+}
+
+.form__textarea::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  right: 0;
+
+  width: 158px;
+  height: 3px;
+
+  background-color: @green;
 }
 
 .form__comment {
+  .font(@fz: 16px);
   min-width: @content-mobile-width;
   height: 150px;
+  margin: 34px 0 27px 20px;
+  padding: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  box-sizing: border-box;
+  font-family: @base-font;
+  text-transform: uppercase;
+  color: @midnight-grey;
+  border: 1px solid rgba(205, 205, 205, 0.5);
   resize: none;
   overflow: auto;
 }
 
+.form__addition {
+  position: relative;
+}
+
+.form__addition::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  right: 0;
+
+  width: 136px;
+  height: 3px;
+
+  background-color: @green;
+}
+
+.form__form-button {
+  text-align: center;
+}
+
 .form__button {
+  .font(@fz: 16px, @lh: 20px);
   width: 280px;
   font-family: @base-font;
-  margin-bottom: 34px;
+  margin-bottom: 19px;
+  margin-left: 21px;
 }
 
 .form__note {
@@ -56,24 +120,108 @@
     width: @content-tablet-width;
   }
 
+  .form__wrapper {
+    margin-bottom: 76px;
+  }
+
+  .form__list {
+    .font(@fz: 20px, @lh: 20px);
+  }
+
+  .form__contacts::before {
+    top: 22px;
+    left: -30px;
+    width: 30px;
+  }
+
+  .form__contacts::after {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    right: -30px;
+
+    width: 147px;
+    height: 3px;
+
+    background: @green;
+  }
+
   .form__title {
     .font(@fz: 36px, @lh: 36px);
+    padding-left: 37px;
+
+    &--cat-owner {
+      width: 592px;
+    }
+  }
+
+  .form__textarea::before {
+    top: 22px;
+    left: -30px;
+    width: 30px;
+  }
+
+  .form__textarea::after {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    right: -30px;
+
+    width: 481px;
+    height: 3px;
+
+    background: @green;
   }
 
   .form__comment {
-    display: block;
+    .font(@fz: 20px, @lh: 30px);
     min-width: 631px;
     height: 174px;
+    margin-top: 77px;
+    margin-left: 39px;
+    margin-bottom: 61px;
+    padding-top: 9px;
+    padding-left: 19px;
+  }
+
+  .form__addition::before {
+    top: 22px;
+    left: -30px;
+
+    width: 30px;
+  }
+
+  .form__addition::after {
+    content: "";
+
+    position: absolute;
+    top: 22px;
+    right: -30px;
+
+    width: 451px;
+    height: 3px;
+
+    background: @green;
   }
 
   .form__form-button {
     display: flex;
-    padding-top: 54px;
+    justify-content: space-between;
+    width: 544px;
+    margin-left: 20px;
   }
 
   .form__button {
+    .font(@fz: 20px, @lh: 20px);
     width: 283px;
     height: 52px;
+  }
+
+  .form__note {
+    .font(@fz: 16px, @lh: 16px);
+    padding-top: 16px;
   }
 }
 
@@ -83,15 +231,61 @@
   }
 
   .form__wrapper {
+    width: @content-desktop-width;
     display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .form__contacts::before {
+    top: 22px;
+    left: -109px;
+    width: 70px;
+  }
+
+  .form__contacts::after {
+    top: 22px;
+    right: -110px;
+    width: 777px;
+  }
+
+  .form__title {
+    padding-left: 0;
+  }
+
+  .form__textarea::before {
+    top: 26px;
+    left: -109px;
+    width: 70px;
+  }
+
+  .form__textarea::after {
+    top: 26px;
+    right: -110px;
+    width: 1113px;
   }
 
   .form__comment {
     min-width: 1220px;
+    margin-left: 2px;
+  }
+
+  .form__addition::before {
+    top: 26px;
+    left: -109px;
+    width: 70px;
+  }
+
+  .form__addition::after {
+    top: 26px;
+    right: -110px;
+    width: 1078px;
   }
 
   .form__form-button {
-    padding-top: 68px;
+    width: 850px;
+    margin-left: -18px;
+    padding-top: 7px;
   }
 
   .form__button {

@@ -1,5 +1,5 @@
 .main-form {
-  width: @content-mobile-width;
+  width: @mobile-width;
   margin: 0 auto;
   padding-bottom: 36px;
 }
@@ -7,11 +7,16 @@
 .main-form__title {
   .reset-list();
   .font(@fz: 36px, @lh: 60px);
+  margin-top: 13px;
+  padding-left: 20px;
 }
 
 .main-form__description {
+  width: 230px;
   margin: 0;
+  padding-top: 26px;
   padding-bottom: 39px;
+  padding-left: 21px;
   text-transform: uppercase;
 }
 
@@ -23,27 +28,37 @@
 
 @media (min-width: @tablet-width) {
   .main-form {
-    width: @content-tablet-width;
+    width: @tablet-width;
+    padding-bottom: 57px;
   }
 
   .main-form__title {
     .font(@fz: 60px, @lh: 60px);
-    padding-top: 64px;
-    padding-bottom: 53px;
+    padding-top: 60px;
+    padding-bottom: 28px;
+    padding-left: 29px;
   }
 
   .main-form__description {
     .font(@fz: 20px, @lh: 30px);
-    padding-bottom: 69px;
+    width: 325px;
+    padding-bottom: 66px;
+    padding-left: 71px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-form {
-    width: @content-desktop-width;
+    width: @desktop-width;
+    padding-bottom: 60px;
   }
 
   .main-form__title {
-    padding-top: 81px;
+    padding-top: 76px;
+    padding-left: 42px;
+  }
+
+  .main-form__description {
+    padding-left: 42px;
   }
 }

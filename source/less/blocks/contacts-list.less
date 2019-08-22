@@ -1,9 +1,51 @@
 .contacts-list {
   .reset-list();
+  padding-left: 20px;
+  padding-top: 32px;
+  padding-bottom: 29px;
 }
 
 .contacts-list__item {
+  position: relative;
   padding-bottom: 14px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &--email::after {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    right: 37px;
+
+    width: 17px;
+    height: 13px;
+
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--tel::after {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+    right: 34px;
+
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.contacts-list__label {
+  padding-right: 8px;
 }
 
 .contacts-list__field {
@@ -17,26 +59,69 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts-list__field--email {
-    min-width: 551px;
+  .contacts-list {
+    padding-left: 42px;
+    padding-top: 76px;
+    padding-bottom: 65px;
   }
 
-  .contacts-list__field--tel {
-    min-width: 535px;
+  .contacts-list__item {
+    padding-bottom: 20px;
+
+    &--email::after {
+      top: 19px;
+      right: 58px;
+    }
+
+    &--tel::after {
+      top: 16px;
+      right: 55px;
+    }
+  }
+
+  .contacts-list__label--email {
+    padding-right: 14px;
+  }
+
+  .contacts-list__field {
+    &--email {
+      min-width: 551px;
+    }
+
+    &--tel {
+      min-width: 535px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts-list {
     display: flex;
+    padding-left: 3px;
+    padding-top: 74px;
+    padding-bottom: 47px;
   }
 
-  .contacts-list__field--email {
-    min-width: 486px;
-    margin-right: 78px;
+  .contacts-list__item {
+    &--email::after {
+      top: 20px;
+      right: 101px;
+    }
+
+    &--tel::after {
+      top: 17px;
+      right: 18px;
+    }
   }
 
-  .contacts-list__field--tel {
-    min-width: 472px;
+  .contacts-list__field {
+    &--email {
+      min-width: 486px;
+      margin-right: 82px;
+    }
+
+    &--tel {
+      min-width: 472px;
+    }
   }
 }

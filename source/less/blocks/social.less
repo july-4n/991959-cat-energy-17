@@ -6,7 +6,7 @@
   width: 130px;
   padding-bottom: 50px;
 
-  &:before {
+  &::before {
     content: "";
 
     position: absolute;
@@ -19,7 +19,7 @@
     background-color: #dadada;
   }
 
-  &:after {
+  &::after {
     content: "";
 
     position: absolute;
@@ -70,14 +70,13 @@
     padding-top: 60px;
     align-items: center;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
   }
 
   .social__link {
-
     &--vkontakte {
       width: 30px;
       height: 16px;

@@ -1,13 +1,13 @@
 .info-address__title {
   .font(@fz: 16px, @lh: 20px);
-  width: 124px;
   display: block;
+  width: 124px;
   text-transform: uppercase;
 }
 
 .info-address__address {
   .font(@lh: 20px);
-  width: 135px;
+  width: 139px;
   margin: 0;
   font-family: @addition-font;
   color: @midnight-grey;
@@ -17,6 +17,7 @@
   .info-address__title {
     .font(@fz: 20px, @lh: 25px);
     width: 154px;
+    padding-top: 2px;
   }
 
   .info-address__address {
@@ -27,15 +28,15 @@
 
   .info-address__city {
     display: block;
-    padding-top: 18px;
+    padding-top: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .info-address {
     position: absolute;
-    box-sizing: border-box;
     justify-content: space-between;
+    box-sizing: border-box;
     background-color: @white;
   }
 

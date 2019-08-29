@@ -19,10 +19,11 @@
 
 .program-list__input--radio + label::before {
   content: "";
-  position: absolute;
 
+  position: absolute;
   top: 21px;
   left: 18px;
+
   width: 30px;
   height: 30px;
 
@@ -36,10 +37,11 @@
 
 .program-list__input--radio:checked + label::after {
   content: "";
-  position: absolute;
 
+  position: absolute;
   top: 31px;
   left: 28px;
+
   width: 12px;
   height: 12px;
 
@@ -66,10 +68,11 @@
 
   .program-list__input--radio + label::before {
     content: "";
-    position: absolute;
 
+    position: absolute;
     top: 23px;
     left: 28px;
+
     width: 37px;
     height: 37px;
 
@@ -79,10 +82,11 @@
 
   .program-list__input--radio:checked + label::after {
     content: "";
-    position: absolute;
 
+    position: absolute;
     top: 33px;
     left: 38px;
+
     width: 18px;
     height: 18px;
 
@@ -95,5 +99,19 @@
   .program-list {
     width: 570px;
     margin: 0;
+  }
+
+  .program-list__item {
+    padding-left: 76px;
+  }
+
+  .program-list__input--radio + label::before {
+    top: 25px;
+    left: 33px;
+  }
+
+  .program-list__input--radio:checked + label::after {
+    top: 35px;
+    left: 43px;
   }
 }

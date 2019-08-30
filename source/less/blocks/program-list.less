@@ -17,21 +17,20 @@
   display: none;
 }
 
-.program-list__input--radio + label::before {
-  content: "";
-
-  position: absolute;
-  top: 21px;
-  left: 18px;
-
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid #cdcdcd;
-  border-radius: 50%;
-}
-
 .program-list__input--radio + label {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 21px;
+    left: 18px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+  }
 
   &:hover::before {
     border: 1px solid #bababa;

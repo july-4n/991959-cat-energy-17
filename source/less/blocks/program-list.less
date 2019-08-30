@@ -31,8 +31,11 @@
   border-radius: 50%;
 }
 
-.program-list__input--radio + label:hover::before {
-  border: 1px solid #bababa;
+.program-list__input--radio + label {
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
 }
 
 .program-list__input--radio:checked + label::after {
@@ -51,6 +54,10 @@
 
 .program-list__label {
   padding-left: 15px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

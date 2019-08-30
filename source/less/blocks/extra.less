@@ -1,13 +1,13 @@
 .extra {
   position: relative;
-  margin-top: 31px;
-  padding-bottom: 14px;
+  margin-top: 27px;
+  padding-bottom: 34px;
 
   &::after {
     content: "";
 
     position: absolute;
-    top: 11px;
+    top: 14px;
     right: 0;
 
     width: 53px;
@@ -21,7 +21,7 @@
   .font(@fz: 24px, @lh: 24px);
   margin: 0;
   padding-left: 19px;
-  padding-bottom: 52px;
+  padding-bottom: 32px;
 }
 
 .extra__wrapper {
@@ -63,43 +63,43 @@
 .extra__button {
   .font(@fz: 16px, @lh: 20px);
   width: 100%;
+  margin-top: 11px;
+  margin-bottom: 16px;
+  padding-top: 10px;
   font-family: @base-font;
-  margin-top: 14px;
-  margin-bottom: 17px;
-  padding-top: 13px;
   border: none;
 }
 
 @media (min-width: @tablet-width) {
   .extra {
     width: auto;
-    margin-top: 71px;
+    margin-top: 66px;
     padding: 0;
 
     &::before {
       content: "";
 
       position: absolute;
-      top: 18px;
-      left: -30px;
+      top: 22px;
+      left: 0;
 
-      width: 30px;
+      width: 28px;
       height: 3px;
 
       background-color: @green;
     }
 
     &::after {
-      top: 18px;
-      right: -30px;
-      width: 330px;
+      top: 22px;
+      right: 0;
+      width: 327px;
     }
   }
 
   .extra__title {
     .font(@fz: 36px, @lh: 36px);
-    padding-left: 39px;
-    padding-bottom: 75px;
+    padding-left: 67px;
+    padding-bottom: 80px;
     border: none;
   }
 
@@ -115,8 +115,10 @@
   .extra__item {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 25px;
     padding-left: 37px;
     padding-right: 37px;
+    align-items: baseline;
     border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
@@ -126,6 +128,7 @@
 
   .extra__table {
     .font(@fz: 16px, @lh: 16px);
+    margin-top: 3px;
   }
 
   .extra__text,
@@ -134,32 +137,35 @@
   }
 
   .extra__weight {
+    padding: 0;
     text-align: right;
   }
 
   .extra__value {
     width: 95px;
+    padding: 0;
   }
 
   .extra__button {
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra {
-    padding-bottom: 85px;
+    margin-top: 78px;
+    padding-bottom: 53px;
 
     &::before {
-      top: 18px;
+      top: 21px;
       left: -110px;
       width: 70px;
     }
 
     &::after {
-      top: 18px;
-      right: -70px;
-      width: 870px;
+      top: 21px;
+      right: -108px;
+      width: 957px;
     }
   }
 
@@ -181,6 +187,7 @@
   .extra__item {
     flex-wrap: nowrap;
     padding: 15px 0;
+    align-items: center;
     border: none;
     border-top: 1px solid #cdcdcd;
 
@@ -190,6 +197,7 @@
   }
 
   .extra__text {
+    width: 160px;
     padding: 0;
   }
 
@@ -198,11 +206,17 @@
   }
 
   .extra__value {
-    padding-right: 29px;
+    width: 81px;
+    text-align: left;
   }
 
   .extra__button {
     width: 245px;
     margin: 0;
+  }
+
+  .extra__table {
+    width: 326px;
+    margin-left: 162px;
   }
 }

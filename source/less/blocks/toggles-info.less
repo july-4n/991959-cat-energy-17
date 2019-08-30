@@ -1,27 +1,24 @@
 .toggles-info {
   display: flex;
   justify-content: space-between;
+  width: 197px;
+  margin: 0 auto;
+  padding-bottom: 37px;
 }
 
 .toggles-info__before,
 .toggles-info__after {
   .font(@fz: 16px, @lh: 20px);
+  padding-top: 29px;
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.toggles-info__before {
-  margin-left: 44px;
-}
-
-.toggles-info__after {
-  margin-right: 39px;
 }
 
 .toggles-info__bar {
   position: relative;
   width: 84px;
   height: 14px;
+  margin-top: 31px;
   border-radius: 6px;
   border: 1px solid #cdcdcd;
   background-color: #ffffff;
@@ -41,12 +38,15 @@
 
 @media (min-width: @tablet-width) {
   .toggles-info {
+    width: 712px;
+    padding-bottom: 69px;
     align-items: center;
   }
 
   .toggles-info__bar {
     width: 428px;
     height: 6px;
+    margin-top: 15px;
     border-radius: 3px;
     background-color: #dcdcdc;
   }
@@ -54,8 +54,10 @@
   .toggles-info__toggle {
     top: -16px;
     left: 200px;
+
     width: 8px;
     height: 8px;
+
     border: 13px solid #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     background-color: #68b738;
@@ -66,6 +68,7 @@
   .toggles-info__after {
     .font(@fz: 20px, @lh: 20px);
     display: inline-block;
+    padding-top: 17px;
     padding-bottom: 5px;
     border-bottom: 1px dotted #d4d4d4;
   }
@@ -75,6 +78,25 @@
   }
 
   .toggles-info__after {
-    margin-right: 70px;
+    margin-right: 72px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .toggles-info__before,
+  .toggles-info__after {
+    padding-top: 36px;
+  }
+
+  .toggles-info__bar {
+    margin-top: 29px;
+  }
+
+  .toggles-info__before {
+    margin-left: 79px;
+  }
+
+  .toggles-info__after {
+    margin-right: 63px;
   }
 }

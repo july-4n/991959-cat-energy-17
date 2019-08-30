@@ -13,23 +13,27 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 
   width: 320px;
   height: 305px;
 
-  z-index: -1;
   background-color: #64a83b;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .main-block__title {
   .font(@fz: 36px, @lh: 36px);
   margin: 0;
-  padding-left: 45px;
   padding-top: 27px;
+  text-align: center;
   color: @white;
 }
 
@@ -45,10 +49,12 @@
 .main-block__wrap {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .main-block__pict {
-  margin-top: 35px;
+  margin-top: 28px;
+  margin-left: 20px;
 }
 
 .main-block__button {
@@ -71,30 +77,33 @@
   .main-block__title {
     .font (@fz: 60px, @lh: 60px);
     width: 427px;
-    padding-top: 50px;
-    padding-left: 90px;
+    padding-top: 55px;
+    padding-left: 86px;
+    text-align: left;
     color: @black;
   }
 
   .main-block__slogan {
     .font (@fz: 20px, @lh: 20px);
     padding: 0;
-    padding-top: 33px;
-    padding-left: 90px;
+    padding-top: 42px;
+    padding-left: 88px;
     color: @black;
   }
 
   .main-block__pict {
-    margin-top: -80px;
+    margin-top: -82px;
+    margin-left: 0;
     order: 2;
     z-index: -1;
   }
 
   .main-block__button {
     .font(@fz: 20px, @lh: 20px);
+    margin: 0;
+    margin-top: 47px;
+    margin-left: 88px;
     padding-top: 17px;
-    margin-top: 50px;
-    margin-left: 90px;
     width: 245px;
     height: 52px;
   }
@@ -106,19 +115,18 @@
   }
 
   .main-block__promo::after {
-    content: "";
-
-    position: absolute;
-    top: -125px;
-    left: 600px;
+    top: -115px;
+    left: 613px;
 
     width: 720px;
     height: 696px;
 
-    z-index: -1;
-    background-color: #64a83b;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .main-block__wrap {
@@ -126,10 +134,21 @@
   }
 
   .main-block__title {
-    padding-left: 80px;
+    padding-left: 85px;
+    padding-top: 107px;
   }
 
   .main-block__slogan {
-    padding-left: 80px;
+    padding-left: 85px;
+  }
+
+  .main-block__pict {
+    margin-top: -262px;
+    margin-left: 120px;
+  }
+
+  .main-block__button {
+    margin-top: 52px;
+    margin-left: 84px;
   }
 }

@@ -35,9 +35,14 @@
   &:hover::before {
     border: 1px solid #bababa;
   }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
-.program-list__input--radio:checked + label::after {
+.program-list__input--radio:checked + label
+  &::after {
   content: "";
 
   position: absolute;
@@ -49,6 +54,10 @@
 
   border-radius: 50%;
   background-color: @green;
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 .program-list__label {

@@ -22,7 +22,7 @@
   box-sizing: border-box;
   border-radius: 6px;
   border: 1px solid #cdcdcd;
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 .toggles-info__toggle {
@@ -35,7 +35,7 @@
 
   box-sizing: border-box;
   border-radius: 3px;
-  background-color: #68b738;
+  background-color: @green;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,7 +48,7 @@
   .toggles-info__bar {
     width: 428px;
     height: 6px;
-    margin-top: 13px;
+    margin-top: 5px;
     border-radius: 3px;
     border: none;
     background-color: #dcdcdc;
@@ -78,7 +78,21 @@
       height: 8px;
 
       border-radius: 50%;
-      background-color: #68b738;
+      background-color: @green;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid @green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active::before {
+      top: 11px;
+      left: 11px;
     }
   }
 
@@ -86,9 +100,17 @@
   .toggles-info__after {
     .font(@fz: 20px, @lh: 20px);
     display: inline-block;
-    padding-top: 17px;
+    padding-top: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px dotted #d4d4d4;
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+
+    &:hover {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   .toggles-info__before {
@@ -101,6 +123,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .toggles-info {
+    width: 722px;
+  }
+
   .toggles-info__before,
   .toggles-info__after {
     padding-top: 36px;
@@ -112,10 +138,10 @@
   }
 
   .toggles-info__before {
-    margin-left: 79px;
+    margin-left: 84px;
   }
 
   .toggles-info__after {
-    margin-right: 63px;
+    margin-right: 68px;
   }
 }

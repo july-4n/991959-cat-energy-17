@@ -18,7 +18,7 @@
   width: 320px;
   height: 305px;
 
-  background-color: #64a83b;
+  background-color: @green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -32,7 +32,7 @@
 .main-block__title {
   .font(@fz: 36px, @lh: 36px);
   margin: 0;
-  padding-top: 27px;
+  padding-top: 28px;
   text-align: center;
   color: @white;
 }
@@ -115,7 +115,7 @@
   }
 
   .main-block__promo::after {
-    top: -115px;
+    top: -114px;
     left: 613px;
 
     width: 720px;
@@ -126,6 +126,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
     }
   }
 
@@ -144,7 +145,7 @@
 
   .main-block__pict {
     margin-top: -262px;
-    margin-left: 120px;
+    margin-left: 125px;
   }
 
   .main-block__button {

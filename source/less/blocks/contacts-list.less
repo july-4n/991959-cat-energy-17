@@ -1,8 +1,6 @@
 .contacts-list {
   .reset-list();
-  padding-left: 20px;
-  padding-top: 32px;
-  padding-bottom: 29px;
+  padding: 32px 0 29px 20px;
 }
 
 .contacts-list__item {
@@ -44,6 +42,10 @@
     fill: @green;
   }
 
+  &--email:invalid {
+    fill: @error;
+  }
+
   &--tel {
     position: absolute;
     top: 14px;
@@ -56,9 +58,7 @@
 
 @media (min-width: @tablet-width) {
   .contacts-list {
-    padding-left: 42px;
-    padding-top: 76px;
-    padding-bottom: 65px;
+    padding: 76px 0 65px 42px;
   }
 
   .contacts-list__item {
@@ -106,9 +106,7 @@
 @media (min-width: @desktop-width) {
   .contacts-list {
     display: flex;
-    padding-left: 3px;
-    padding-top: 74px;
-    padding-bottom: 47px;
+    padding: 74px 0 47px 3px;
   }
 
   .contacts-list__item {
@@ -136,14 +134,14 @@
 
   .contacts-list__icon {
     &--email {
-      top: 20px;
-      left: 530px;
+      top: 21px;
+      left: 532px;
     }
 
     &--tel {
       position: absolute;
-      top: 17px;
-      left: 530px;
+      top: 18px;
+      left: 531px;
     }
   }
 }

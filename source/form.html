@@ -6,14 +6,10 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>Подбор программы питания Кэт энерджи</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody();</script>
-    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
-    <div style="display: none">
+    <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header">
@@ -22,8 +18,7 @@
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38"
-              alt="Логотип магазина Кэт энерджи">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина Кэт энерджи">
           </picture>
         </a>
         <nav class="main-nav main-nav--opened">
@@ -84,7 +79,7 @@
             </fieldset>
           </div>
           <fieldset class="form__contacts">
-            <legend class="form__title form__title--cat-owner">Контактные данные (владельца кота)</legend>
+            <legend class="form__title form__title--contacts">Контактные данные (владельца кота)</legend>
             <ul class="form__list contacts-list">
               <li class="contacts-list__item contacts-list__item--email">
                 <label class="contacts-list__label contacts-list__label--email" for="email">E-mail:*</label>
@@ -103,11 +98,11 @@
             </ul>
           </fieldset>
           <fieldset class="form__textarea">
-            <legend class="form__title">Комментарий</legend>
+            <legend class="form__title form__title--comment">Комментарий</legend>
             <textarea class="form__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form__addition">
-            <legend class="form__title">Дополнительно</legend>
+            <legend class="form__title form__title--addition">Дополнительно</legend>
             <ul class="form__list addition-list">
               <li class="addition-list__item">
                 <input class="addition-list__input addition-list__input--checkbox" id="sweetener" type="checkbox" name="sweetener" checked="">
@@ -146,12 +141,11 @@
         </div>
         <div class="contacts__map">
           <h2 class="visually-hidden">Как добраться до нас</h2>
-          <iframe class="contacts__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258688!2d30.32085335200346!3d59.9387164817872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1567514265111!5m2!1sen!2sru" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <iframe class="contacts__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787258688!2d30.32085335200346!3d59.9387164817872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1567514265111!5m2!1sen!2sru" allowfullscreen=""></iframe>
         </div>
         <div class="contacts__wrapper">
           <a class="contacts__logo" href="index.html">
-            <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24"
-              alt="Логотип-название магазина Кэт энерджи">
+            <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Логотип-название магазина Кэт энерджи">
           </a>
           <ul class="social">
             <li class="social__item">
@@ -187,5 +181,9 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.min.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>
